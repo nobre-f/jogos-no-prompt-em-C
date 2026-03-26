@@ -7,9 +7,6 @@ Sob monitoria de Benjamin Suzuki.
 Para a matéria de Algoritmo e Codificações de Sistemas, do professor Pedro Henrique Girotto.
 Cesupa, março de 2026.  */
 
-// ==========================================
-//      FUNÇÃO ANTI-QUEBRA (VALIDAÇÃO)
-// ==========================================
 int ler_inteiro(int min, int max) {
     int valor;
     int leitura;
@@ -59,8 +56,8 @@ int main(int argc, char *argv[]) {
             jogar = 1;
             
             while(jogar == 1) {
-                printf("\nBem vindo ao Pergunta e Respostas\n\n\n");
-                
+                printf("\nBem vindo ao Pergunta e Respostas\n\n");
+                printf("- Este jogo contem 5 perguntas, onde cada uma tem sua resposta certa.\n");
                 int resposta;
                 
                 printf("Qual a capital do PA:\n");
@@ -158,6 +155,10 @@ int main(int argc, char *argv[]) {
             while(jogar == 1) {
                 
                 printf("\nBem vindo ao Cobra na caixa\n\n");
+                printf("- 5 caixas sao sorteadas.\n");
+                printf("- Uma caixa tem o botao para abrir a porta, outra esconde uma cobra mortal.\n");
+                printf("- A cada rodada, o botao e a cobra trocam de caixa de forma totalmente aleatoria.\n");
+                printf("Se der COBRA, o player perde. Se der BOTAO, o player ganha!\n");
                 
                 char nomes[7][20] = {
                     "Maria", "Geovana", "Fabio", "Gabriel",
@@ -257,6 +258,11 @@ int main(int argc, char *argv[]) {
         if(opcao == 3) {    
             // Jogo 3: Gousmas Wars
             printf("\nBem vindo ao Gousmas Wars\n");
+            printf("Cada jogador tem duas gousmas!\n");
+            printf("Cada player inicia com furia=1\n");
+            printf("Cada player pode atacar e dividir as gousmas\n");
+            printf(" Se a furia for maior que 5, a gousma morre!\n");
+            printf("O player ganha quando as duas gousmas do outro jogador morrerem!\n");
             jogar = 1;
             
             while(jogar == 1) {
@@ -338,7 +344,8 @@ int main(int argc, char *argv[]) {
                         }
                         
                         int pode_dividir = 1;
-                        if((P1furia1 <= 1 && P1furia1 >= 6) || (P1furia2 <= 1 && P1furia2 >= 6)) {
+                        // Correção da lógica aqui:
+                        if((P1furia1 <= 1 || P1furia1 >= 6) && (P1furia2 <= 1 || P1furia2 >= 6)) {
                             printf("Nao e possivel dividir as Gousmas neste turno.\n");
                             pode_dividir = 0;
                         } 
@@ -434,7 +441,8 @@ int main(int argc, char *argv[]) {
                         }
                         
                         int pode_dividir = 1;
-                        if((P2furia1 <= 1 && P2furia1 >= 6) || (P2furia2 <= 1 && P2furia2 >= 6)) {
+                        // Correção da lógica aqui também:
+                        if((P2furia1 <= 1 || P2furia1 >= 6) && (P2furia2 <= 1 || P2furia2 >= 6)) {
                             printf("Nao e possivel dividir as Gousmas neste turno.\n");
                             pode_dividir = 0;
                         } 
