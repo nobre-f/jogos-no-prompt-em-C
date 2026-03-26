@@ -4,7 +4,7 @@
 
 /* Desenvolvido por Arthur Moraes e Fernando Nobre.
 Sob monitoria de Benjamin Suzuki.
-Para a matéria de Algoritmo e Codificações de Sistemas, do professor Pedro Henrique Girotto.
+Para a matéria de Algoritmo e CodificaÃ§Ãµes de Sistemas, do professor Pedro Henrique Girotto.
 Cesupa, março de 2026.  */
 
 int ler_inteiro(int min, int max) {
@@ -17,12 +17,12 @@ int ler_inteiro(int min, int max) {
         if (leitura != 1) {
             printf("Entrada invalida! Por favor, digite um numero inteiro: ");
             while (getchar() != '\n'); 
-            continue; // Volta para o início do loop
+            continue; 
         } 
         
         if (valor < min || valor > max) {
             printf("Opcao invalida! Digite um numero entre %d e %d: ", min, max);
-            continue; // Volta para o início do loop
+            continue; 
         } 
         
         if (valor >= min && valor <= max) {
@@ -273,7 +273,6 @@ int main(int argc, char *argv[]) {
                 
                 while(vitoria == 1) {
                     
-                    // --- VEZ DO P1 ---
                     printf("\n--- Vez do P1 ---\n");
                     printf("1) Atacar\n");
                     printf("2) Dividir\n");
@@ -344,7 +343,6 @@ int main(int argc, char *argv[]) {
                         }
                         
                         int pode_dividir = 1;
-                        // Correção da lógica aqui:
                         if((P1furia1 <= 1 || P1furia1 >= 6) && (P1furia2 <= 1 || P1furia2 >= 6)) {
                             printf("Nao e possivel dividir as Gousmas neste turno.\n");
                             pode_dividir = 0;
@@ -370,7 +368,6 @@ int main(int argc, char *argv[]) {
                         break; 
                     }
                     
-                    // --- VEZ DO P2 ---
                     printf("\n--- Vez do P2 ---\n");
                     printf("1) Atacar\n");
                     printf("2) Dividir\n");
@@ -441,7 +438,6 @@ int main(int argc, char *argv[]) {
                         }
                         
                         int pode_dividir = 1;
-                        // Correção da lógica aqui também:
                         if((P2furia1 <= 1 || P2furia1 >= 6) && (P2furia2 <= 1 || P2furia2 >= 6)) {
                             printf("Nao e possivel dividir as Gousmas neste turno.\n");
                             pode_dividir = 0;
